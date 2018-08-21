@@ -1,0 +1,286 @@
+var operando;
+var operacion;
+var res;
+
+function limpiar(){
+  resultado.textContent = "0";
+}
+function resetear(){
+  resultado.textContent = "0";
+  operando = 0;
+  operacion = "";
+}
+function init(){
+  var btn0 = document.getElementById("0");
+  var btn1 = document.getElementById("1");
+  var btn2 = document.getElementById("2");
+  var btn3 = document.getElementById("3");
+  var btn4 = document.getElementById("4");
+  var btn5 = document.getElementById("5");
+  var btn6 = document.getElementById("6");
+  var btn7 = document.getElementById("7");
+  var btn8 = document.getElementById("8");
+  var btn9 = document.getElementById("9");
+  var multiplicacion = document.getElementById("por");
+  var suma = document.getElementById("mas");
+  var resta = document.getElementById("menos");
+  var division = document.getElementById("dividido");
+  var resultado = document.getElementById("display");
+  var reset = document.getElementById("on");
+  var igual = document.getElementById("igual");
+  var punto = document.getElementById("punto");
+  var signo = document.getElementById("signo");
+  btn0.onmousedown = function(e){
+    if(resultado.textContent.length < 8, resultado.textContent > 0 ){
+       resultado.textContent = resultado.textContent  + "0";
+   }
+   btn0.style.cssText = 'z-index: -1';
+  }
+  btn0.onmouseout = function(e){
+    btn0.style.cssText = 'z-index: +1';
+  }
+  btn1.onmousedown = function(e){
+    if(resultado.textContent.length < 8 ){
+      if (resultado.textContent > "0") {
+        resultado.textContent = resultado.textContent  + "1";
+      }
+      else if (resultado.textContent = "0") {
+        resultado.textContent = "1";
+      }
+    }
+    else {
+      alert("No puedes escribir más de 8 caractéres")
+    }
+    btn1.style.cssText = 'z-index: -1';
+    operando = 1;
+  }
+  btn1.onmouseout = function(e){
+    btn1.style.cssText = 'z-index: +1';
+  }
+  btn2.onmousedown = function(e){
+    if(resultado.textContent.length < 8 ){
+      if (resultado.textContent > "0") {
+        resultado.textContent = resultado.textContent  + "2";
+      }
+      else if (resultado.textContent = "0") {
+        resultado.textContent = "2";
+      }
+    }
+    else {
+      alert("No puedes escribir más de 8 caractéres")
+    }
+    btn2.style.cssText = 'z-index: -1';
+    operando = 2;
+  }
+  btn2.onmouseout = function(e){
+    btn2.style.cssText = 'z-index: +1';
+  }
+  btn3.onmousedown = function(e){
+    if(resultado.textContent.length < 8 ){
+      if (resultado.textContent > "0") {
+        resultado.textContent = resultado.textContent  + "3";
+      }
+      else if (resultado.textContent = "0") {
+        resultado.textContent = "3";
+      }
+    }
+    else {
+      alert("No puedes escribir más de 8 caractéres")
+    }
+    btn3.style.cssText = 'z-index: -1';
+    operando = 3;
+  }
+  btn3.onmouseout = function(e){
+    btn3.style.cssText = 'z-index: +1';
+  }
+  btn4.onmousedown = function(e){
+    if(resultado.textContent.length < 8 ){
+      if (resultado.textContent > "0") {
+        resultado.textContent = resultado.textContent  + "4";
+      }
+      else if (resultado.textContent = "0") {
+        resultado.textContent = "4";
+      }
+    }
+    else {
+      alert("No puedes escribir más de 8 caractéres")
+    }
+    btn4.style.cssText = 'z-index: -1';
+    operando = 4;
+  }
+  btn4.onmouseout = function(e){
+    btn4.style.cssText = 'z-index: +1';
+  }
+  btn5.onmousedown = function(e){
+    if(resultado.textContent.length < 8 ){
+      if (resultado.textContent > "0") {
+        resultado.textContent = resultado.textContent  + "5";
+      }
+      else if (resultado.textContent = "0") {
+        resultado.textContent = "5";
+      }
+    }
+    else {
+      alert("No puedes escribir más de 8 caractéres")
+    }
+    btn5.style.cssText = 'z-index: -1';
+    operando = 5;
+  }
+  btn5.onmouseout = function(e){
+    btn5.style.cssText = 'z-index: +1';
+  }
+  btn6.onmousedown = function(e){
+    if(resultado.textContent.length < 8 ){
+      if (resultado.textContent > "0") {
+        resultado.textContent = resultado.textContent  + "6";
+      }
+      else if (resultado.textContent = "0") {
+        resultado.textContent = "6";
+      }
+    }
+    else {
+      alert("No puedes escribir más de 8 caractéres")
+    }
+    btn6.style.cssText = 'z-index: -1';
+    operando = 6;
+  }
+  btn6.onmouseout = function(e){
+    btn6.style.cssText = 'z-index: +1';
+  }
+  btn7.onmousedown = function(e){
+    if(resultado.textContent.length < 8 ){
+      if (resultado.textContent > "0") {
+        resultado.textContent = resultado.textContent  + "7";
+      }
+      else if (resultado.textContent = "0") {
+        resultado.textContent = "7";
+      }
+    }
+    else {
+      alert("No puedes escribir más de 8 caractéres")
+    }
+    btn7.style.cssText = 'z-index: -1';
+    operando = 7;
+  }
+  btn7.onmouseout = function(e){
+    btn7.style.cssText = 'z-index: +1';
+  }
+  btn8.onmousedown = function(e){
+    if(resultado.textContent.length < 8 ){
+      if (resultado.textContent > "0") {
+        resultado.textContent = resultado.textContent  + "8";
+      }
+      else if (resultado.textContent = "0") {
+        resultado.textContent = "8";
+      }
+    }
+    else {
+      alert("No puedes escribir más de 8 caractéres")
+    }
+    btn8.style.cssText = 'z-index: -1';
+    operando = 8;
+  }
+  btn8.onmouseout = function(e){
+    btn8.style.cssText = 'z-index: +1';
+  }
+  btn9.onmousedown = function(e){
+    if(resultado.textContent.length < 8 ){
+      if (resultado.textContent > "0") {
+        resultado.textContent = resultado.textContent  + "9";
+      }
+      else if (resultado.textContent = "0") {
+        resultado.textContent = "9";
+      }
+    }
+    else {
+      alert("No puedes escribir más de 8 caractéres")
+    }
+    btn9.style.cssText = 'z-index: -1';
+    operando = 9;
+  }
+  btn9.onmouseout = function(e){
+    btn9.style.cssText = 'z-index: +1';
+  }
+  punto.onmousedown = function(e){
+    if(resultado.textContent.includes(".")){
+  }
+  else if(resultado.textContent.length < 8 ) {
+    punto.style.cssText = 'z-index: -1';
+    resultado.textContent = resultado.textContent + ".";
+  }
+  }
+  punto.onmouseout = function(e){
+    punto.style.cssText = 'z-index: +1';
+  }
+  sign.onmousedown = function(e){
+    if (resultado.textContent = +resultado.textContent) {
+      resultado.textContent = -resultado.textContent;
+      sign.style.cssText = 'z-index: -1';
+    }
+  }
+  sign.onmouseout = function(e){
+    sign.style.cssText = 'z-index: +1';
+  }
+  reset.onmousedown = function(e){
+    resultado.textContent = "0";
+    operando = 0;
+    operacion = "";
+    reset.style.cssText = 'z-index: -1';
+  }
+  reset.onmouseout = function(e){
+    reset.style.cssText = 'z-index: +1';
+  }
+  suma.onmousedown = function(e){
+    res = resultado.textContent;
+    operacion = "+";
+    resultado.textContent = "0";
+  }
+  resta.onmousedown = function(e){
+    res = resultado.textContent;
+    operacion = "-";
+    resultado.textContent = "0";
+    resta.style.cssText = 'z-index: -1';
+  }
+  resta.onmouseout = function(e){
+    resta.style.cssText = 'z-index: +1';
+  }
+  multiplicacion.onmousedown = function(e){
+    res = resultado.textContent;
+    operacion = "*";
+    resultado.textContent = "0";
+    multiplicacion.style.cssText = 'z-index: -1';
+  }
+  multiplicacion.onmouseout = function(e){
+    multiplicacion.style.cssText = 'z-index: +1';
+  }
+  division.onmousedown = function(e){
+    res = resultado.textContent;
+    operacion = "/";
+    resultado.textContent = "0";
+    division.style.cssText = 'z-index: -1';
+  }
+  division.onmouseout = function(e){
+    division.style.cssText = 'z-index: +1';
+  }
+  igual.onmousedown = function(e){
+      switch (operacion){
+        case "+":
+          res = parseFloat(res) + operando;
+          break;
+        case "-":
+          res = parseFloat(res) - operando;
+          break;
+        case "*":
+          res = parseFloat(res) * operando;
+          break;
+        case "/":
+          res = parseFloat(res) / operando;
+          break;
+    }
+    resultado.textContent = res;
+    igual.style.cssText = 'z-index: -1';
+  }
+  igual.onmouseout = function(e){
+    igual.style.cssText = 'z-index: +1';
+  }
+}
